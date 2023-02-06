@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import MintButton from './components/MintButton';
 import ConnectWalletButton from './components/ConnectWalletButton';

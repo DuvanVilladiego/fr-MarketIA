@@ -1,4 +1,4 @@
-export const MarketPlace = {
+export const MarketPlace:any = {
     address: {
         5:'0x005d6E9aD7A41639819313A9546E7084fc16E480'
     },

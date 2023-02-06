@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { getGeolocation } from '../../helpers/geolocation';
 import ipfsUpload from '../../helpers/ipfs';

@@ -1,6 +1,6 @@
+import React from 'react';
 import { useState } from 'react';
 import './index.css'
-
 
 export default function ConnectWalletButton({setIsConnected, setProvider, window, ethers}:any) {
 

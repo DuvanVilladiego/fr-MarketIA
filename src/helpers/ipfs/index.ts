@@ -1,4 +1,4 @@
-import {create} from 'ipfs-core';
+import { create } from 'ipfs-core';
 import { Buffer } from "buffer";
 
 export default async function ipfsUpload(_imageUrl:string) {
