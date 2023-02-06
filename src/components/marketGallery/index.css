@@ -1,0 +1,16 @@
+.gallery_content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: lightsteelblue;
+    border-radius: 5px;
+
+}
+
+.gallery_content > img{
+    margin: 5px 10px;
+    max-width: 30%;
+    min-width: 20%;
+    border: 3px solid slategray;
+    border-radius: 5px;
+}

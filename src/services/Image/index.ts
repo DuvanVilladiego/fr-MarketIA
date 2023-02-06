@@ -14,7 +14,7 @@ export async function getImage( _weather:string ) {
     const raw = JSON.stringify({
         "prompt": weather + " " + date,
         "n": 1,
-        "size": "1024x1024"
+        "size": "512x512"
     });
 
     const responseFetch:any = await fetch(endpoint, {

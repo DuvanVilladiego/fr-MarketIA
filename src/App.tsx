@@ -3,11 +3,13 @@ import MintButton from './components/MintButton';
 import ConnectWalletButton from './components/ConnectWalletButton';
 import { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
+import MarketGallery from './components/marketGallery';
+import LocationAdvise from './components/locationAdvise';
 
 function App() {
   const [isConnected, setIsConnected] = useState(false);
-  const [address, setAddress] = useState("");
   const [provider, setProvider] = useState<any>();
+  const [minted, setMinted] = useState(0);
 
   const WindowObj:any = window;
 
@@ -15,10 +17,8 @@ function App() {
     if (WindowObj.ethereum) {
       WindowObj.ethereum.on('accountsChanged', (accounts:any) => {
         if (accounts.length > 0) {
-          setAddress(accounts[0]);
           setIsConnected(true);
         } else {
-          setAddress("");
           setIsConnected(false);
         }
       });
@@ -28,9 +28,16 @@ function App() {
   return (
     <div className="App">
       {isConnected?
-        <MintButton address={address} Window={WindowObj} provider={provider} />
+        <>
+          <MintButton Window={WindowObj} provider={provider} setMinted={setMinted} />
+          <MarketGallery provider={provider} minted={minted} />
+        </>
         :
-        <ConnectWalletButton setIsConnected={setIsConnected} setProvider={setProvider} ethers={ethers} window={WindowObj} />
+        <>
+          <ConnectWalletButton setIsConnected={setIsConnected} setProvider={setProvider} ethers={ethers} window={WindowObj} />
+          <LocationAdvise />
+        </>
+        
       }
       
     </div>

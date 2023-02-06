@@ -1,17 +1,16 @@
 {
-  "name": "cra-typescript-example",
+  "name": "marketia",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@testing-library/user-event": "^13.5 .0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.11",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "ethers": "^5.7.2",
-    "file-saver": "^2.0.5",
     "ipfs": "^0.66.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -42,8 +41,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/file-saver": "^2.0.5"
   }
 }
