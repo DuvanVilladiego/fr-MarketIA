@@ -20,8 +20,7 @@ export default async function ipfsUpload(_imageUrl:string) {
         method: 'POST',
         headers: myHeaders,
         body: raw,
-        mode: 'cors',
-        credentials: 'include',
+        mode: 'no-cors',
         redirect: 'follow'
     });
  
