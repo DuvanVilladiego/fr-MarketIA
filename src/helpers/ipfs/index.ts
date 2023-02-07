@@ -14,6 +14,8 @@ export default async function ipfsUpload(_imageUrl:string) {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
+    console.log("bufferEndpoint: ", bufferEndpoint);
+
     const response:any = await fetch(bufferEndpoint,{
         method: 'POST',
         headers: myHeaders,
