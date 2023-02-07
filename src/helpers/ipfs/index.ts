@@ -16,12 +16,11 @@ export default async function ipfsUpload(_imageUrl:string) {
 
     console.log("bufferEndpoint: ", bufferEndpoint);
 
-    const response:any = await fetch(`http://ec2-44-202-186-2.compute-1.amazonaws.com/marketia/api/v1/bufferImg`,{
+    const response:any = await fetch(bufferEndpoint,{
         method: 'POST',
         headers: myHeaders,
         body: raw,
-        mode: 'cors',
-        credentials: 'include',
+        mode: 'cors',   
         redirect: 'follow'
     });
  
