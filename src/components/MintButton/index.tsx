@@ -15,7 +15,7 @@ export default function MintButton({provider, setMinted}:any) {
     const [buttonStatus, setButtonStatus] = useState({});
     const [statusText, setStatusText] = useState('Generar NFT');
 
-    const signer:any = provider.getSigner();
+    const signer:any = provider?.getSigner();
     const MarketPlace:any = useMarketPlace(signer);
 
     useEffect(() => {

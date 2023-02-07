@@ -8,7 +8,7 @@ export default function MarketGallery({provider, minted}:any) {
     const [nftsIds, setNftsIds] = useState<any>([]);
     const [metadata, setMetadata] = useState<any>([]);
 
-    const signer:any = provider.getSigner();
+    const signer:any = provider?.getSigner();
     const MarketPlace:any = useMarketPlace(signer);
 
     useEffect(() => {
