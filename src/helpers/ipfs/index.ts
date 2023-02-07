@@ -22,7 +22,7 @@ export default async function ipfsUpload(_imageUrl:string) {
         body: raw,
         redirect: 'follow'
     });
-
+ 
     const responseJso:any = await response.json();
 
     const bufferData = new Buffer(responseJso.bufferData, 'binary');
